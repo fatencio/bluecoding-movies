@@ -1,0 +1,620 @@
+* {
+ font-family: Arial;
+}
+
+.text-lg {
+    font-size: calc(1.1em + 1vw);
+}
+
+.text-md {
+    font-size: calc(0.8em + 1vw);
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-18 {
+    font-size: 18px;
+}
+
+header.masthead {
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+.movie-header {
+  height: 11vw;
+}
+
+.movie-menu {
+  text-align: right;
+  height: 100%;
+  margin-bottom: 20px;  
+}
+
+.movie-items {
+  height: 100%;
+}
+
+.movie-details {
+  color: white;
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.menu-title {
+    margin-top: 14px;
+}
+
+.menu-item {
+    color: white;
+    font-size: 14px;
+}
+
+.menu-subitem {
+    color: gray;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.movie-details-item {
+  float: left;
+  margin-right: 12px;
+}
+
+.movie-features {
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 1px;
+  line-height: 1;
+  margin-top: 3.2px;
+  transform: scale(1, 0.75);
+  -webkit-transform: scale(1, 0.75); /* Safari and Chrome */
+  -moz-transform: scale(1, 0.75); /* Firefox */
+  -ms-transform: scale(1, 0.75); /* IE 9+ */
+  -o-transform: scale(1, 0.75); /* Opera */  
+  font-size: 13px;
+}
+
+.movie-extra-features {
+  color: #ddd;
+  border-color: #ddd;
+}
+
+.movie-price {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-size: 18px;
+    color: white;
+}
+
+.movie-rate {
+  font-family: serif;
+  font-weight: 600;    
+  font-size: 13px;  
+}
+
+.movie-quality {
+  font-weight: 900;    
+  font-size: 13px;  
+}
+
+.movie-overview {
+  clear: both;
+  color: #eee;
+  font-size: 17px;
+  font-weight: 100;
+  margin-top: 50px;
+  margin-right: 180px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.links-md {
+    margin-top: 20px;
+}
+
+.movie-body {
+  background: #232222;
+  display: flex;
+  color: #868181;
+  padding: 10px 0 40px 50px;
+  overflow-x: hidden;
+}
+
+.category-title {
+  font-size: 18px;
+  margin-bottom: -12px;
+}
+
+.sections-title {
+  font-size: 22px;
+  clear: both;
+}
+
+.trailers-container {
+  width: 3000px;
+  overflow-x: hidden; 
+  margin-top: 5px;
+  height: 230px;
+}
+
+.trailer-item {
+  float: left;
+  width:800px;
+}
+
+.trailer-poster {
+  margin-right: 25px;
+  float: left;
+}
+
+.trailer-description {
+  font-size: 18px;
+  color: #ddd;
+  margin-right: 40px;
+}
+
+
+.reviews-container{
+  background: #484445;
+  height: 190px;
+  border-radius: 6px;
+  padding: 10px 12px 10px 14px;
+  color: white;
+  float: left;
+  margin-right: 35px;
+  margin-top: 10px;  
+}
+
+.review-short{
+  width: 160px;
+  margin-bottom: 26px;
+}
+
+.review-long{
+  width: 300px;
+}
+
+.review-title {
+    font-family: sans-serif;
+    font-weight: 100;
+    color: white;
+}
+
+.review-subtitle {
+    margin-bottom: 10px;
+}
+
+.review-content {
+  clear: both;
+  color: #ddd;
+  line-height: 1.2;
+}
+
+.review-content-long {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.review-content-reviewer {
+  margin-left: 30px;
+  margin-top: 6px;
+}
+
+
+.stars {
+  float: left;
+  padding-right: 4px;
+  margin-bottom: 10px;
+}
+
+.rating_tomatoes_reviews {
+    margin-right: 15px;
+    width: 32px;
+    text-align: right;
+    float: left;
+}
+
+.link-title {
+  color: #bbb;
+  font-size: 14px;
+  text-align: center; 
+}
+
+.cast-name {
+  color: #bbb;
+}
+
+.cast-character {
+  color: #777;
+}
+
+/* FOOTER */
+.footer {
+    background: #232222;
+}
+
+.footer-title {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px
+}
+
+.footer-subtitle {
+    color: white;
+    font-size: 14px;
+    line-height:  1.3;
+    height: 21px;
+}
+
+.footer-text {
+    color: #888;
+    font-size: 14px;
+    line-height:  1.3;
+}
+
+.footer-hr {
+    background: #444;
+    height: 1px;
+    margin: -20px -20px 30px -20px;
+}
+
+.footer-space {
+    height: 6px;
+}
+
+.footer-space-lg {
+    height: 40px;
+}
+
+.footer-accesibility {
+  width: 27px;
+  padding-left: 2px;
+}
+/* end FOOTER */
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 767px) {
+  .movie-menu {
+    display: none;
+  }
+
+  .movie-overview {
+    font-size: 13px;
+    margin-right: 0;
+  }  
+
+}
+
+@media (min-width: 992px) {
+  .visible-md-down {
+      display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .links-lg {
+      display: none;
+  }
+
+  .hidden-md-down {
+    display: none;
+  }  
+}
+
+@media (min-width: 992px) {
+  .links-md {
+      display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1096px) {
+  .menu-subitem {
+    display: none;
+  }
+
+  .movie-overview {
+    font-size: 16px;
+    margin-right: 50px;
+  }  
+
+}
+/* end MEDIA QUERIES */
+
+
+/* CAROUSELS */
+/* Related movies carousel */
+:root {
+
+      /* Tile Dimensions */
+      --carouselRelated-tile-spacing: -30px;
+      --carouselRelated-tile-width:   148px;
+      --carouselRelated-tile-height:  222px;
+
+      /* Growth Factor */
+      --carouselRelated-growth-factor: 1.2;
+
+      /* Fade to Opacity */
+      --carouselRelated-fade-opacity:   0.5;
+      --carouselRelated-normal-opacity: 1;
+
+      /* Automatic Offsets - DO NOT ALTER */
+      --carouselRelated-offset-left:  calc(-1 * (var(--carouselRelated-tile-width) * (var(--carouselRelated-growth-factor) - 1) / 2));
+      --carouselRelated-offset-right: calc(var(--carouselRelated-tile-width) * (var(--carouselRelated-growth-factor) - 1));
+
+      /* Transition Speeds */
+      --carouselRelated-transition-1: 1s;
+      --carouselRelated-transition-2: 0.5s;
+      --carouselRelated-transition-3: 0.3s;
+
+}
+
+/* CarouselRelated Container */
+.carouselRelated {
+      margin: 0;
+      margin-left: -14px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 200px;      
+      overflow-x: hidden;
+      overflow-y: hidden;
+}
+
+/* CarouselRelated Row */
+.carouselRelated-row {
+      white-space: nowrap;
+      margin-top: calc((var(--carouselRelated-tile-height) * (var(--carouselRelated-growth-factor) - 1)) / 2);
+      margin-bottom: calc((var(--carouselRelated-tile-height) * (var(--carouselRelated-growth-factor) - 1)) / 2);
+      margin-left: calc((var(--carouselRelated-tile-width) * (var(--carouselRelated-growth-factor) - 1)) / 2);
+      margin-right: calc((var(--carouselRelated-tile-width) * (var(--carouselRelated-growth-factor) - 1)) / 2);
+      transition: var(--carouselRelated-transition-2);
+}
+
+/* Content Tile */
+.carouselRelated-tile {
+      position: relative;
+      display: inline-block;
+      width: var(--carouselRelated-tile-width);
+      height: var(--carouselRelated-tile-height);
+      margin-right: var(--carouselRelated-tile-spacing);
+      transition: var(--carouselRelated-transition-2);
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+      cursor: pointer;
+      cursor: hand;
+}
+
+
+
+/* Ensure All Elements Inside Tile are Block */
+.carouselRelated-tile * {
+      display: block;
+}
+
+/* CarouselRelated Row on Hover */
+.carouselRelated-row:hover {
+      -webkit-transform: translate3d(var(--carouselRelated-offset-left), 0, 0);
+      transform: translate3d(var(--carouselRelated-offset-left), 0, 0);
+}
+
+/* Content Tile on CarouselRelated Row Hover */
+.carouselRelated-row:hover .carouselRelated-tile {
+      opacity: var(--carouselRelated-fade-opacity);
+}
+
+/* Content Tile on Hover on CarouselRelated Row Hover */
+.carouselRelated-row:hover .carouselRelated-tile:hover {
+      -webkit-transform: scale(var(--carouselRelated-growth-factor));
+      transform: scale(var(--carouselRelated-growth-factor));
+      opacity: var(--carouselRelated-normal-opacity);
+}
+
+/* Content Tile on Hover */
+.carouselRelated-tile:hover ~ .carouselRelated-tile {
+      -webkit-transform: translate3d(var(--carouselRelated-offset-right), 0, 0);
+      transform: translate3d(var(--carouselRelated-offset-right), 0, 0);
+}
+
+/* END Related movies carousel */
+
+
+/* Cast carouselCast */
+:root {
+
+      /* Tile Dimensions */
+      --carouselCast-tile-spacing: 30px;
+      --carouselCast-tile-width:   165px;
+      --carouselCast-tile-height:  165px;
+
+      /* Growth Factor */
+      --carouselCast-growth-factor: 1.2;
+
+      /* Fade to Opacity */
+      --carouselCast-fade-opacity:   0.5;
+      --carouselCast-normal-opacity: 1;
+
+      /* Automatic Offsets - DO NOT ALTER */
+      --carouselCast-offset-left:  calc(-1 * (var(--carouselCast-tile-width) * (var(--carouselCast-growth-factor) - 1) / 2));
+      --carouselCast-offset-right: calc(var(--carouselCast-tile-width) * (var(--carouselCast-growth-factor) - 1));
+
+      /* Transition Speeds */
+      --carouselCast-transition-1: 1s;
+      --carouselCast-transition-2: 0.5s;
+      --carouselCast-transition-3: 0.3s;
+
+}
+
+/* CarouselCast   Container */
+.carouselCast {
+      margin: 0;
+      margin-left: -14px;
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+}
+
+/* CarouselCast   Row */
+.carouselCast-row {
+      white-space: nowrap;
+      margin-top: calc((var(--carouselCast-tile-height) * (var(--carouselCast-growth-factor) - 1)) / 2);
+      margin-bottom: calc((var(--carouselCast-tile-height) * (var(--carouselCast-growth-factor) - 1)) / 2);
+      margin-left: calc((var(--carouselCast-tile-width) * (var(--carouselCast-growth-factor) - 1)) / 2);
+      margin-right: calc((var(--carouselCast-tile-width) * (var(--carouselCast-growth-factor) - 1)) / 2);
+      transition: var(--carouselCast-transition-2);
+}
+
+/* Content Tile */
+.carouselCast-tile {
+      text-align:   center;
+      position: relative;
+      display: inline-block;
+      width: var(--carouselCast-tile-width);
+      height: var(--carouselCast-tile-height);
+      margin-right: var(--carouselCast-tile-spacing);
+      transition: var(--carouselCast-transition-2);
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+      cursor: pointer;
+      cursor: hand;
+}
+
+
+
+/* Ensure All Elements Inside Tile are Block */
+.carouselCast-tile * {
+      display: block;
+}
+
+/* CarouselCast   Row on Hover */
+.carouselCast-row:hover {
+      -webkit-transform: translate3d(var(--carouselCast-offset-left), 0, 0);
+      transform: translate3d(var(--carouselCast-offset-left), 0, 0);
+}
+
+/* Content Tile on CarouselCast   Row Hover */
+.carouselCast-row:hover .carouselCast-tile {
+      opacity: var(--carouselCast-fade-opacity);
+}
+
+/* Content Tile on Hover on CarouselCast  Row Hover */
+.carouselCast-row:hover .carouselCast-tile:hover {
+      -webkit-transform: scale(var(--carouselCast-growth-factor));
+      transform: scale(var(--carouselCast-growth-factor));
+      opacity: var(--carouselCast-normal-opacity);
+}
+
+/* Content Tile on Hover */
+.carouselCast-tile:hover ~ .carouselCast-tile {
+      -webkit-transform: translate3d(var(--carouselCast-offset-right), 0, 0);
+      transform: translate3d(var(--carouselCast-offset-right), 0, 0);
+}
+
+/* END Cast carousel */
+
+/* Links carousel */
+:root {
+
+      /* Tile Dimensions */
+      --carouselLinks-tile-spacing: 14px;
+      --carouselLinks-tile-width:   80px;
+      --carouselLinks-tile-height:  80px;
+
+      /* Growth Factor */
+      --carouselLinks-growth-factor: 1.1;
+
+      /* Fade to Opacity */
+      --carouselLinks-fade-opacity:   0.5;
+      --carouselLinks-normal-opacity: 1;
+
+      /* Automatic Offsets - DO NOT ALTER */
+      --carouselLinks-offset-left:  calc(-1 * (var(--carouselLinks-tile-width) * (var(--carouselLinks-growth-factor) - 1) / 2));
+      --carouselLinks-offset-right: calc(var(--carouselLinks-tile-width) * (var(--carouselLinks-growth-factor) - 1));
+
+      /* Transition Speeds */
+      --carouselLinks-transition-1: 1s;
+      --carouselLinks-transition-2: 0.5s;
+      --carouselLinks-transition-3: 0.3s;
+
+}
+
+/* CarouselLinks   Container */
+.carouselLinks {
+      margin: 0;
+      margin-left: -4px;
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+}
+
+/* CarouselLinks   Row */
+.carouselLinks-row {
+      white-space: nowrap;
+      margin-top: calc((var(--carouselLinks-tile-height) * (var(--carouselLinks-growth-factor) - 1)) / 2);
+      margin-bottom: calc((var(--carouselLinks-tile-height) * (var(--carouselLinks-growth-factor) - 1)) / 2);
+      margin-left: calc((var(--carouselLinks-tile-width) * (var(--carouselLinks-growth-factor) - 1)) / 2);
+      margin-right: calc((var(--carouselLinks-tile-width) * (var(--carouselLinks-growth-factor) - 1)) / 2);
+      transition: var(--carouselLinks-transition-2);
+}
+
+/* Content Tile */
+.carouselLinks-tile {
+      position: relative;
+      display: inline-block;
+      width: var(--carouselLinks-tile-width);
+      height: var(--carouselLinks-tile-height);
+      margin-right: var(--carouselLinks-tile-spacing);
+      transition: var(--carouselLinks-transition-2);
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+      cursor: pointer;
+      cursor: hand;
+}
+
+
+
+/* Ensure All Elements Inside Tile are Block */
+.carouselLinks-tile * {
+      display: block;
+}
+
+/* CarouselLinks   Row on Hover */
+.carouselLinks-row:hover {
+      -webkit-transform: translate3d(var(--carouselLinks-offset-left), 0, 0);
+      transform: translate3d(var(--carouselLinks-offset-left), 0, 0);
+}
+
+/* Content Tile on CarouselLinks   Row Hover */
+.carouselLinks-row:hover .carouselLinks-tile {
+      opacity: var(--carouselLinks-fade-opacity);
+}
+
+/* Content Tile on Hover on CarouselLinks  Row Hover */
+.carouselLinks-row:hover .carouselLinks-tile:hover {
+      -webkit-transform: scale(var(--carouselLinks-growth-factor));
+      transform: scale(var(--carouselLinks-growth-factor));
+      opacity: var(--carouselLinks-normal-opacity);
+}
+
+/* Content Tile on Hover */
+.carouselLinks-tile:hover ~ .carouselLinks-tile {
+      -webkit-transform: translate3d(var(--carouselLinks-offset-right), 0, 0);
+      transform: translate3d(var(--carouselLinks-offset-right), 0, 0);
+}
+
+/* END Links Carousel */
+
+/* END CAROUSEL */
+
+
+

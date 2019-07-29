@@ -1,0 +1,170 @@
+<!-- Header -->
+<header class="masthead" [ngStyle]="{'background-image': 'url(../../assets/img/' + movie.backdrop + ')'}"> 
+  <div *ngIf="movie">
+    <div class="container">
+      <div class="movie-header"></div>
+      <div class="row">
+        <div class="col-2 movie-menu">
+                <ul class="nav flex-column flex-nowrap">
+                    <li class="nav-item menu-title">
+                        <a class="menu-item" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Menu Item</a>
+                        <ul class="flex-column pl-2 nav">
+                          <li class="nav-item "><a class="menu-subitem" href="#">sub item</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item menu-title">
+                        <a class="menu-item" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Menu Item</a>
+                        <ul class="flex-column pl-2 nav">
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>                      
+                        </ul>
+                    </li>
+                    <li class="nav-item menu-title">
+                        <a class="menu-item" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Menu Item</a>
+                        <ul class="flex-column pl-2 nav">
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>
+                          <li class="nav-item"><a class="menu-subitem" href="#">sub item</a></li>
+                        </ul>
+                    </li>                
+                </ul>
+            </div>
+        <div class="col-md-8 movie-items">
+           <div class="movie-details">
+              <div class="movie-details-item"><img width="18px" src='../../assets/img/rating_tomato.png' /> {{movie.rating_tomatoes_total}}</div>
+              <div class="movie-details-item"><img width="18px" src='../../assets/img/rating_check.png' /> {{movie.rating_check}}</div>
+              <div class="movie-details-item">{{movie.length}}</div>
+              <div class="movie-details-item">{{movie.year}}</div>
+              <div class="movie-details-item movie-features movie-rate">{{movie.rate}}</div>
+              <div class="movie-details-item movie-features movie-quality">{{movie.quality}}</div>
+              <div class="movie-details-item movie-features movie-extra-features" *ngFor="let feature of movie.features">{{feature.title}}</div>
+          </div>
+          <div class="movie-overview">{{movie.overview}}</div>
+
+          <div class="links-lg">
+            <div class="carouselLinks" >
+              <div class="carouselLinks-row" >
+                  <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/video_button.png' />
+                    <span class="link-title text-16">Title</span>
+                  </div>
+                  <div class="carouselLinks-tile"><div class="movie-price">{{movie.price}}</div><img width="100%" src='../../assets/img/price_button.png' />
+                    <span class="link-title text-16">Title</span>
+                  </div>   
+                  <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/plus_button.png' />
+                    <span class="link-title text-16">Title</span>
+                  </div> 
+                  <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/more_button.png' />
+                    <span class="link-title text-16">Title</span>
+                  </div>                                              
+              </div>
+            </div>
+          </div> 
+        </div> 
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>   
+</header>
+
+<section class="movie-body">
+  <div *ngIf="movie">
+
+  <!-- Movie links small devices -->
+  <div class="links-md">
+    <div class="carouselLinks" >
+      <div class="carouselLinks-row" >
+          <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/video_button.png' />
+            <span class="link-title text-16">Title</span>
+          </div>
+          <div class="carouselLinks-tile"><div class="movie-price">{{movie.price}}</div><img width="100%" src='../../assets/img/price_button.png' />
+            <span class="link-title text-16">Title</span>
+          </div>   
+          <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/plus_button.png' />
+            <span class="link-title text-16">Title</span>
+          </div> 
+          <div class="carouselLinks-tile"><img width="100%" src='../../assets/img/more_button.png' />
+            <span class="link-title text-16">Title</span>
+          </div>                                              
+      </div>
+    </div>
+  </div>
+  <!-- END Movie links small devices -->  
+
+    <!-- Related content -->
+    <div class="category-title">More {{movie.category}} Movies</div>
+    <div class="carouselRelated" >
+      <div class="carouselRelated-row" >
+        <span *ngFor="let movie of movies | async">
+          <div class="carouselRelated-tile"><img height="60%" width="60%" src='../../assets/img/{{movie.poster}}' /></div>
+      </span>
+      </div>
+    </div>
+    <!-- END Related content -->
+
+    <!-- Movie trailers -->
+    <div class="sections-title">Trailers</div>
+      <div class="trailers-container">
+        <span *ngFor="let trailer of movie.trailers">
+            <div class="trailer-item">              
+              <div class="trailer-poster"><img width="329px" src='../../assets/img/{{trailer.poster}}' /></div>
+              <div class="trailer-description">{{trailer.description}}</div>
+            </div>
+        </span>
+       </div>
+    <!-- END Movie trailers -->
+
+    <!-- Movie ratings & reviews -->
+    <div class="sections-title">Ratings & Reviews</div>
+      <div class="reviews-container review-short">
+        <div class="review-title text-lg">{{movie.rating_stars}} / 5</div>
+        <div class="review-subtitle stars" *ngFor="let dummy of ' '.repeat(movie.rating_stars).split(''), let x = index"><img width="17px" src='../../assets/img/star.png' /></div>
+        <div class="review-content">{{movie.rating_stars_review}}</div>
+      </div>
+
+      <div class="reviews-container review-short">
+        <div class="review-title text-lg"><img src='../../assets/img/rating_check.png' />{{movie.rating_check}}</div>
+        <div class="review-subtitle">{{movie.rating_check_subtitle}}</div>
+        <div class="review-content">{{movie.rating_check_review}}</div>
+      </div>
+
+      <div class="reviews-container review-short">
+        <div class="review-title text-lg"><img src='../../assets/img/rating_tomato.png' /> {{movie.rating_tomatoes_total}}</div>
+        <div class="review-subtitle">{{movie.rating_tomatoes_subtitle}}</div>
+        <div class="review-content"><div class="rating_tomatoes_reviews">{{movie.rating_tomatoes_reviews}}</div>Reviews</div>
+        <div class="review-content"><div class="rating_tomatoes_reviews">{{movie.rating_tomatoes_fresh}}</div>Fresh</div>
+        <div class="review-content"><div class="rating_tomatoes_reviews">{{movie.rating_tomatoes_rotten}}</div>Rotten</div>
+        <div class="review-content"><div class="rating_tomatoes_reviews">{{movie.rating_tomatoes_average}}</div>Average</div>
+      </div>              
+
+      <div class="reviews-container review-long">
+        <div class="review-title text-md"><img src='../../assets/img/rating_green.png' /> {{movie.rating_green}}</div>
+        <div class="review-content review-content-long">{{movie.rating_green_review}}</div>        
+        <div class="review-content review-content-reviewer ">{{movie.rating_green_reviewer}}, {{movie.rating_green_date}}</div>        
+      </div>
+
+      <div class="reviews-container review-long">
+        <div class="review-title text-md"><img src='../../assets/img/rating_tomato.png' /> {{movie.rating_tomatoes}}</div>
+        <div class="review-content review-content-long">{{movie.rating_tomatoes_review}}</div>        
+        <div class="review-content review-content-reviewer ">{{movie.rating_tomatoes_reviewer}}, {{movie.rating_tomatoes_date}}</div>        
+      </div>
+      <br />
+    <!-- END Movie ratings & reviews -->    
+
+
+    <!-- Movie cast & crew -->
+    <div class="sections-title">Cast & Crew</div>
+    <div class="carouselCast" >
+      <div class="carouselCast-row" >
+        <span *ngFor="let cast of movie.cast">
+          <div class="carouselCast-tile"><img width="100%" src='../../assets/img/{{cast.photo}}' />
+            <span class="cast-name text-18">{{cast.name}}</span>
+            <span class="cast-character text-14">{{cast.character}}</span>
+          </div>
+      </span>
+      </div>
+    </div>    
+    <!-- END Movie cast & crew -->
+
+  </div>
+</section>
